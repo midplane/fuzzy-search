@@ -8,7 +8,7 @@ Include as a dependency in your `pom.xml`:
 <dependency>
     <groupId>dev.midplane</groupId>
     <artifactId>fuzzy-search</artifactId>
-    <version>1.0.0-1</version>
+    <version>1.0.0-2</version>
 </dependency>
 ```
 
