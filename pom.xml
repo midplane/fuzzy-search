@@ -10,7 +10,7 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <description>Fuzzy search algorithm implementation in Java</description>
-    <url>http://github.com/midplane/fuzzy-search</url>
+    <url>https://github.com/midplane/fuzzy-search</url>
 
     <developers>
         <developer>
@@ -37,6 +37,13 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- Plugin versions -->
+        <maven-source-plugin.version>2.2.1</maven-source-plugin.version>
+        <maven-javadoc-plugin.version>2.9.1</maven-javadoc-plugin.version>
+        <maven-gpg-plugin.version>1.5</maven-gpg-plugin.version>
+        <sonatype.central-publishing-maven-plugin.version>0.4.0</sonatype.central-publishing-maven-plugin.version>
+
+        <!-- Dependency versions -->
         <lombok.version>1.18.30</lombok.version>
         <junit.version>5.8.1</junit.version>
     </properties>
@@ -61,7 +68,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>${maven-source-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -74,7 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.9.1</version>
+                <version>${maven-javadoc-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -87,7 +94,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
+                <version>${maven-gpg-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
@@ -101,7 +108,7 @@
             <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <version>${sonatype.central-publishing-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <publishingServerId>central</publishingServerId>
@@ -110,5 +117,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
