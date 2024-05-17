@@ -34,3 +34,16 @@ searcher.indexEntities(entities, Entity::id, entity ->List.of(entity.name()));
 final var result = entitySearcher.getMatches(new Query("Alice"));
 System.out.println(result);
 ```
+
+## Benchmark
+```md
+Benchmark                           Mode  Cnt    Score   Error   Units
+FuzzySearchBenchmark.searcher1k    thrpt       61.320          ops/ms
+FuzzySearchBenchmark.searcher10k   thrpt       18.756          ops/ms
+FuzzySearchBenchmark.searcher100k  thrpt        5.774          ops/ms
+FuzzySearchBenchmark.searcher1m    thrpt        1.110          ops/ms
+FuzzySearchBenchmark.searcher1k     avgt        0.017           ms/op
+FuzzySearchBenchmark.searcher10k    avgt        0.038           ms/op
+FuzzySearchBenchmark.searcher100k   avgt        0.171           ms/op
+FuzzySearchBenchmark.searcher1m     avgt        1.184           ms/op
+```
