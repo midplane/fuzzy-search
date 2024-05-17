@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class EntityResult<TEntity> {
-    private final List<EntityMatch<TEntity>> matches;
+public class EntityResult<Entity> {
+    private final List<EntityMatch<Entity>> matches;
     private final Query query;
 }

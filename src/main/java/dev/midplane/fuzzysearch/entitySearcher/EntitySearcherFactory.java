@@ -11,7 +11,7 @@ import dev.midplane.fuzzysearch.stringsearchers.NormalizingSearcher;
 import dev.midplane.fuzzysearch.stringsearchers.SortingSearcher;
 
 public class EntitySearcherFactory {
-    public static <TEntity, TId> DefaultEntitySearcher<TEntity, TId> createSearcher(Config config) {
+    public static <Entity, Id> DefaultEntitySearcher<Entity, Id> createSearcher(Config config) {
         final var ngramComputer = new NgramComputer(config.getNgramComputerConfig());
         final var normalizer = DefaultNormalizer.create(config.getNormalizerConfig());
 

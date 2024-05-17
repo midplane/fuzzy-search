@@ -18,6 +18,8 @@ class DefaultEntitySearcherTest {
         final var entities = List.of(new Entity(23501, "Alice"), new Entity(99234, "Bob"), new Entity(5823, "Carol"),
                                      new Entity(11923, "Charlie"));
         entitySearcher = new DefaultEntitySearcher<>(literalSearcher);
+
+
         entitySearcher.indexEntities(entities, Entity::id, entity -> List.of(entity.name()));
 
         final var people = List.of(new Person(23501, "Alice", "Programmer"), new Person(99234, "Bob", "Teacher"),
