@@ -2,12 +2,13 @@ package dev.midplane.fuzzysearch.fuzzysearchers;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class InvertedIndex {
     private final Map<String, TermIds> ngramToTermIds;
 
     public InvertedIndex() {
-        this.ngramToTermIds = new HashMap<>();
+        this.ngramToTermIds = new ConcurrentHashMap<>();
     }
 
     public void add(String ngram, int termIndex, int frequency) {
